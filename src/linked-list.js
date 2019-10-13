@@ -55,7 +55,7 @@ class LinkedList {
                     current.prev.next = node;
                     node.next = current;
                     current.prev = node;
-                    //return true;
+                    break;
                 }
                 counter++
             }
@@ -84,7 +84,7 @@ class LinkedList {
         let current = this._head;
         let counter = 0;
         while (current) {
-            if (counter == index) {
+            if (counter == index && this.length > 1) {
                 current.prev.next = current.next;
                 this.length--;
             }
